@@ -11,12 +11,16 @@ class TestExercise < Test::Unit::TestCase
     assert_equal(1, Exercise.new(3,4).findCombinations(4))
   end
 
-  test 'more steps' do
+  test 'two steps' do
     assert_equal(5, Exercise.new(1,2).findCombinations(4))
+  end
+
+  test 'more steps' do
+    assert_equal(7, Exercise.new(1,2,3).findCombinations(4))
     assert_equal(2, Exercise.new(2,3,4).findCombinations(4))
   end
 
-  test 'unirdered steps' do
+  test 'unordered steps' do
     assert_equal(5, Exercise.new(2,1).findCombinations(4))
     assert_equal(2, Exercise.new(4,2,3).findCombinations(4))
   end
